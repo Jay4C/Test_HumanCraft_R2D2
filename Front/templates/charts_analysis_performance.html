@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+          crossorigin="anonymous">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <title>
+        Analysis of web performance
+    </title>
+  </head>
+  <body>
+    <div class="container">
+        <br>
+        <br>
+
+        <h1>
+            Analysis of web performance of the URL (https://www.voici.fr) for the metric cumulative_layout_shift_score
+        </h1>
+
+        <br>
+        <br>
+
+        <!-- Chart 1 -->
+        <div class="card text-center">
+          <div class="card-header">
+              LineChart 1 for the proportion of distribution min 0 to max 10
+          </div>
+          <div class="card-body">
+            <div>
+              <canvas id="myChart1"></canvas>
+            </div>
+            <script>
+              const labels1 = {{ rows1[0] }};
+
+              const data1 = {
+                labels: labels1,
+                datasets: [{
+                  label: 'Proportion of distribution min 0 to max 10',
+                  backgroundColor: 'rgb(255, 99, 132)',
+                  borderColor: 'rgb(255, 99, 132)',
+                  data: {{ rows1[1] }},
+                }]
+              };
+
+              const config1 = {
+                type: 'line',
+                data: data1,
+                options: {}
+              };
+
+              const myChart1 = new Chart(
+                document.getElementById('myChart1'),
+                config1
+              );
+            </script>
+          </div>
+        </div>
+        <!-- Chart 1 -->
+
+        <br>
+        <br>
+
+        <!-- Chart 2 -->
+        <div class="card text-center">
+          <div class="card-header">
+            LineChart 2 for the proportion of distribution min 10 to max 25
+          </div>
+          <div class="card-body">
+              <div>
+              <canvas id="myChart2"></canvas>
+            </div>
+            <script>
+              const labels2 = {{ rows2[0] }};
+
+              const data2 = {
+                labels: labels2,
+                datasets: [{
+                  label: 'Proportion of distribution min 10 to max 25',
+                  backgroundColor: 'rgb(255, 99, 132)',
+                  borderColor: 'rgb(255, 99, 132)',
+                  data: {{ rows2[1] }},
+                }]
+              };
+
+              const config2 = {
+                type: 'line',
+                data: data2,
+                options: {}
+              };
+
+              const myChart2 = new Chart(
+                document.getElementById('myChart2'),
+                config2
+              );
+            </script>
+          </div>
+        </div>
+        <!-- Chart 2 -->
+
+        <br>
+        <br>
+
+        <!-- Chart 3 -->
+        <div class="card text-center">
+          <div class="card-header">
+            LineChart 3 for the proportion of distribution min 25
+          </div>
+          <div class="card-body">
+              <div>
+              <canvas id="myChart3"></canvas>
+            </div>
+            <script>
+              const labels3 = {{ rows3[0] }};
+
+              const data3 = {
+                labels: labels3,
+                datasets: [{
+                  label: 'Proportion of distribution min 25',
+                  backgroundColor: 'rgb(255, 99, 132)',
+                  borderColor: 'rgb(255, 99, 132)',
+                  data: {{ rows3[1] }},
+                }]
+              };
+
+              const config3 = {
+                type: 'line',
+                data: data3,
+                options: {}
+              };
+
+              const myChart = new Chart(
+                document.getElementById('myChart3'),
+                config3
+              );
+            </script>
+          </div>
+        </div>
+        <!-- Chart 3 -->
+
+        <br>
+        <br>
+    </div>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+            crossorigin="anonymous"></script>
+  </body>
+</html>
